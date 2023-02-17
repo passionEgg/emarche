@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ComponentTestController;
+use App\Http\Controllers\LifeCycleTestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,10 @@ Route::get('/dashboard', function () {
 // use App\Http\Controllers\ComponentTestController;
 Route::get('/components-test1', [ComponentTestController::class, 'showComponent1']);
 Route::get('/components-test2', [ComponentTestController::class, 'showComponent2']);
+Route::get('/servicecontainertest', [LifeCycleTestController::class, 'showServiceContainerTest']);
+Route::get('/serviceprovidertest', [LifeCycleTestController::class, 'showServiceProviderTest']);
+
+
 
 
 require __DIR__.'/auth.php';
